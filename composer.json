@@ -23,6 +23,7 @@
         "drupal/core-recommended": "^8.8",
         "drupal/core-vendor-hardening": "^8.8",
         "drupal/csv_serialization": "^1.4",
+        "drupal/devel": "^2.1",
         "drupal/rules": "^3.0@alpha",
         "drupal/search_api": "^1.15",
         "drupal/views_data_export": "^1.0@beta",
