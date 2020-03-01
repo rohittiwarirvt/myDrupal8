@@ -202,3 +202,14 @@ if (empty($settings['file_scan_ignore_directories'])) {
   ];
 }
 
+
+$databases['default']['default'] = array (
+  'database' => 'visa_app',
+  'username' => 'root',
+  'password' => 'root',
+  'prefix' => '',
+  'host' => '127.0.0.1',
+  'port' => '3306',
+  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
+  'driver' => 'mysql',
+);
