@@ -16,10 +16,17 @@
     ],
     "require": {
         "composer/installers": "^1.2",
+        "drupal/better_exposed_filters": "^4.0@alpha",
+        "drupal/bootstrap": "^3.21",
         "drupal/core-composer-scaffold": "^8.8",
         "drupal/core-project-message": "^8.8",
         "drupal/core-recommended": "^8.8",
-        "drupal/core-vendor-hardening": "^8.8"
+        "drupal/core-vendor-hardening": "^8.8",
+        "drupal/csv_serialization": "^1.4",
+        "drupal/rules": "^3.0@alpha",
+        "drupal/search_api": "^1.15",
+        "drupal/views_data_export": "^1.0@beta",
+        "drupal/xls_serialization": "^1.1"
     },
     "require-dev": {
     },
