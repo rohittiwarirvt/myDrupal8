@@ -1,0 +1,68 @@
+.document-reports-page {
+
+}
+
+.document-reports-page .form-item , .document-crud-page .form-item{
+    margin: 0 4em 0 0;
+}
+
+.document-reports-page .form-item label, .document-crud-page .form-item label {
+    padding: 0 0 .75em 0;
+}
+
+.document-reports-page  .form-item select, .document-crud-page .form-item select {
+    height: 1.85em;
+}
+
+.document-crud-page  .form-actions {
+    float: left;
+    clear: unset;
+     display: inline-block;
+}
+
+
+.document-reports-page  .view-content, .document-crud-page  .view-content {
+    margin-top: 2.5em;
+}
+
+
+.document-reports-page .form-item-field-lca-wage-level-value {
+  clear: left;
+        margin-top: 1em;
+}
+
+.document-reports-page .form-item-field-lca-wage-level-value ~ .form-item {
+      margin-top: 1em;
+}
+
+
+div .document-reports-page  .form-item-field__h1b-start-date-value-value {
+    margin-top: 1.75em ;
+}
+
+.document-reports-page .form-actions {
+    margin-top: 3em;
+    float: left;
+}
+.document-reports-page  .form-actions input{
+  padding: .5em 1.5em;
+}
+
+.page-node-type-document .block-local-tasks-block {
+  clear:both;
+}
+
+.node--type-document.node--view-mode-full .node__content .field {
+  float:left;
+  width: 50%;
+  margin: 1em 0 .5em 0;
+}
+
+.node--type-document.node--view-mode-full .node__content .field .field__label,
+.node--type-document.node--view-mode-full .node__content .field .field__item{
+  display: inline-block;
+}
+.node--type-document.node--view-mode-full .node__content .field .field__label {
+      width: 13em;
+}
+
