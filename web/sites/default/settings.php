@@ -756,13 +756,16 @@ $settings['entity_update_backup'] = TRUE;
 #   include $app_root . '/' . $site_path . '/settings.local.php';
 # }
 $databases['default']['default'] = array (
-  'database' => 'drupal8v1',
+  'database' => 'nld8',
   'username' => 'root',
-  'password' => '',
+  'password' => 'root',
   'prefix' => '',
   'host' => 'localhost',
   'port' => '3306',
   'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
   'driver' => 'mysql',
 );
-$settings['config_sync_directory'] = 'sites/default/files/config_vPcudgGzTri7HOQkf7aeTQjFAsZAtKPUrprzCcxPvo3N3-r_QoN03lzbfXav6DcmesqqThQ4vA/sync';
+
+
+
+$settings['config_sync_directory'] = '../config/sync';

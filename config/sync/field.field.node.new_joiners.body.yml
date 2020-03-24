@@ -1,0 +1,23 @@
+uuid: fa83bc15-2417-45df-90ef-8fbf1be781fc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.new_joiners
+  module:
+    - text
+id: node.new_joiners.body
+field_name: body
+entity_type: node
+bundle: new_joiners
+label: 'Short Information'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary
