@@ -1,0 +1,28 @@
+uuid: 052db2d3-37aa-4ce3-857a-7ccec7efe54d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_profile_pic_link
+    - node.type.new_joiners
+  module:
+    - link
+id: node.new_joiners.field_profile_pic_link
+field_name: field_profile_pic_link
+entity_type: node
+bundle: new_joiners
+label: 'Profile Pic Link'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    attributes: {  }
+    uri: 'https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=200'
+    title: ''
+    options: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link
