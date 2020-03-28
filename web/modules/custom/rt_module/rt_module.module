@@ -1,0 +1,31 @@
+<?php
+
+use Drupal\views\ViewExecutable;
+
+/**
+ * Implements hook_views_pre_render().
+ *
+ * @see \Drupal\views\Tests\Plugin\CacheTest
+ * @see \Drupal\views\Tests\Plugin\RenderTest
+ */
+function rt_module_views_pre_render(ViewExecutable $view) {
+    dsm($view->current_display,"v");
+    dsm($view->storage->id(),"Storage_id");
+    dsm($view->id(),"view Storage_id");
+
+  if (isset($view) && 
+        ($view->id() == 'newjoiners_timeline' && $view->current_display == 'newjoiner_timeliners_page' )
+      ) {
+    $view->element['#attached']['library'][] = 'rt_module/timelinerjs';
+  }
+
+}
+
+function rt_module_preprocess_views_view(&$variables) {
+  $view = $variables['view'];
+
+  if ($view->id() == 'newjoiners_timeline') {
+
+    $variables['attributes']['class'][] = 'timeline-wrapper-newjoiners';
+  }
+}
