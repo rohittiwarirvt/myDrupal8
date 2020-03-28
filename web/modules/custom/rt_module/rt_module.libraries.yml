@@ -1,0 +1,11 @@
+timelinerjs:
+  js:
+    timeliner/js/timeliner.js: {}
+    js/script.js: {}
+  css:
+    theme:
+      timeliner/css/timeliner.css: {}
+      timeliner/css/responsive.css: {}
+      css/custom.css: {}
+  dependencies:
+    - core/jquery
