@@ -1,11 +1,64 @@
 timelinerjs:
   js:
     timeliner/js/timeliner.js: {}
-    js/script.js: {}
+    js/rt-timeliner.js: {}
   css:
     theme:
       timeliner/css/timeliner.css: {}
       timeliner/css/responsive.css: {}
-      css/custom.css: {}
+      css/rt-timeliner.css: {}
   dependencies:
     - core/jquery
+    - core/drupal
+timelifyjs:
+  js:
+    timelify/js/jquery.js: {}
+    timelify/js/jquery.timelify.js: {}
+    js/rt-timelify.js: {}
+  css:
+    theme:
+      timelify/css/font-awesome.min.css: {}
+      timelify/css/timelify.css: {}
+      css/timelify.css: {}
+  dependencies:
+    - core/drupal
+innovators:
+  js:
+    timelify/js/jquery.js: {}
+    timelify/js/jquery.timelify.js: {}
+    js/rt-timelify.js: {}
+  css:
+    theme:
+      timelify/css/font-awesome.min.css: {}
+      timelify/css/timelify.css: {}
+      css/timelify.css: {}
+  dependencies:
+    - core/drupal
+2sidedcard:
+  js:
+    timelify/js/jquery.js: {}
+    timelify/js/jquery.timelify.js: {}
+    js/rt-timelify.js: {}
+  css:
+    theme:
+      timelify/css/font-awesome.min.css: {}
+      timelify/css/timelify.css: {}
+      css/timelify.css: {}
+  dependencies:
+    - core/drupal
+usercards:
+  css:
+    theme:
+      css/rt-usercards.css: {}
+contactme:
+  js:
+    timelify/js/jquery.js: {}
+    timelify/js/jquery.timelify.js: {}
+    js/rt-timelify.js: {}
+  css:
+    theme:
+      timelify/css/font-awesome.min.css: {}
+      timelify/css/timelify.css: {}
+      css/timelify.css: {}
+  dependencies:
+    - core/drupal

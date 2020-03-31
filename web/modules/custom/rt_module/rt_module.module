@@ -9,23 +9,66 @@ use Drupal\views\ViewExecutable;
  * @see \Drupal\views\Tests\Plugin\RenderTest
  */
 function rt_module_views_pre_render(ViewExecutable $view) {
-    dsm($view->current_display,"v");
-    dsm($view->storage->id(),"Storage_id");
-    dsm($view->id(),"view Storage_id");
+ # dsm($view->id(),"id");
+ # dsm($view->current_display,"cr");
+  if (isset($view) && ($view->id() == 'newjoiners_timeline' ) ) {
+    switch ($view->current_display) {
+      case 'newjoiner_timeliners_page':
+        $view->element['#attached']['library'][] = 'rt_module/timelinerjs';
+        break;
+      case 'newjoiners_timelify_page':
+        $view->element['#attached']['library'][] = 'rt_module/timelifyjs';
+        break;
+      case 'newjoiner_innovators_page':
+        $view->element['#attached']['library'][] = 'rt_module/innovators';
+        break;
+      case 'newjoiner_2sidedcard_page':
+        $view->element['#attached']['library'][] = 'rt_module/2sidedcard';
+        break;
+      case 'newjoiner_usercards_page':
+        $view->element['#attached']['library'][] = 'rt_module/usercards';
+      break;
+      case 'newjoiner_contactme_page':
+        $view->element['#attached']['library'][] = 'rt_module/contactme';
+      break;
+      default:
+        # code...
+        break;
+    }
 
-  if (isset($view) && 
-        ($view->id() == 'newjoiners_timeline' && $view->current_display == 'newjoiner_timeliners_page' )
-      ) {
-    $view->element['#attached']['library'][] = 'rt_module/timelinerjs';
   }
+
 
 }
 
 function rt_module_preprocess_views_view(&$variables) {
   $view = $variables['view'];
+  #dsm($view->current_display,"cr");
+  if (isset($view) && ($view->id() == 'newjoiners_timeline' ) ) {
+    switch ($view->current_display) {
+      case 'newjoiner_timeliners_page':
+        $variables['attributes']['class'][] = 'timeline-wrapper-newjoiners';
+        break;
+      case 'newjoiners_timelify_page':
+        $variables['attributes']['class'][] = 'timeline';
+        break;
+      case 'newjoiner_innovators_page':
+        // $view->element['#attached']['library'][] = 'rt_module/innovators';
+        break;
+      case 'newjoiner_2sidedcard_page':
+        // $view->element['#attached']['library'][] = 'rt_module/2sidedcard';
+        break;
+      case 'newjoiner_usercards_page':
+        $variables['attributes']['class'][] = 'timeline';
+      break;
+      case 'newjoiner_contactme_page':
+        // $view->element['#attached']['library'][] = 'rt_module/contactme';
+      break;
+      default:
+        # code...
+        break;
+    }
 
-  if ($view->id() == 'newjoiners_timeline') {
-
-    $variables['attributes']['class'][] = 'timeline-wrapper-newjoiners';
   }
+
 }

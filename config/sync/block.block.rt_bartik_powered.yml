@@ -1,6 +1,6 @@
 uuid: e9dcb8a7-372e-4ab8-a335-e2bc24eeaecd
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - system
@@ -19,4 +19,9 @@ settings:
   label: 'Powered by Drupal'
   provider: system
   label_display: '0'
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: /newjoiners-timeline-timelinerjs
+    negate: true
+    context_mapping: {  }
