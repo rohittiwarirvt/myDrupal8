@@ -1,6 +1,6 @@
 uuid: 419438ba-d9d4-404c-bb00-94bf26cdf865
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.footer
@@ -24,4 +24,9 @@ settings:
   level: 1
   depth: 0
   expand_all_items: false
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: /newjoiners-timeline-timelinerjs
+    negate: true
+    context_mapping: {  }

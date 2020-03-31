@@ -3,7 +3,9 @@ langcode: en
 status: true
 dependencies:
   module:
+    - block_visibility_groups
     - search
+    - system
   theme:
     - rt_bartik
 _core:
@@ -20,4 +22,14 @@ settings:
   provider: search
   label_display: visible
   page_id: node_search
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '/evh/*'
+    negate: true
+    context_mapping: {  }
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }

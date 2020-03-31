@@ -5,6 +5,7 @@ dependencies:
   config:
     - system.menu.account
   module:
+    - block_visibility_groups
     - system
   theme:
     - rt_bartik
@@ -24,4 +25,14 @@ settings:
   level: 1
   depth: 1
   expand_all_items: false
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '/evh/*'
+    negate: true
+    context_mapping: {  }
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }
