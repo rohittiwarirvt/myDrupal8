@@ -1046,6 +1046,7 @@ display:
           entity_type: node
           entity_field: title
           plugin_id: field
+      enabled: false
     cache_metadata:
       max-age: -1
       contexts:
@@ -1532,6 +1533,7 @@ display:
       row:
         type: fields
         options: {  }
+      enabled: false
     cache_metadata:
       max-age: -1
       contexts:
@@ -2019,6 +2021,7 @@ display:
           entity_type: node
           entity_field: title
           plugin_id: field
+      enabled: false
     cache_metadata:
       max-age: -1
       contexts:
@@ -2488,6 +2491,8 @@ display:
           plugin_id: field
       defaults:
         fields: false
+        css_class: false
+      css_class: timeline-wrapper-newjoiners
     cache_metadata:
       max-age: -1
       contexts:
@@ -2975,6 +2980,7 @@ display:
       row:
         type: fields
         options: {  }
+      enabled: false
     cache_metadata:
       max-age: -1
       contexts:
@@ -3447,6 +3453,7 @@ display:
           entity_type: node
           entity_field: title
           plugin_id: field
+      enabled: false
     cache_metadata:
       max-age: -1
       contexts:

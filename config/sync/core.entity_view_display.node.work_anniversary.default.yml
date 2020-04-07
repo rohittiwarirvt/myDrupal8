@@ -1,0 +1,49 @@
+uuid: e0c225a8-cc4b-4bf5-8dea-e6f3ca3a6bcb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.work_anniversary.feeds_item
+    - field.field.node.work_anniversary.field_email
+    - field.field.node.work_anniversary.field_job_role
+    - field.field.node.work_anniversary.field_joining_date
+    - node.type.work_anniversary
+  module:
+    - datetime
+    - user
+id: node.work_anniversary.default
+targetEntityType: node
+bundle: work_anniversary
+mode: default
+content:
+  field_email:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_job_role:
+    weight: 104
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_joining_date:
+    weight: 103
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  feeds_item: true

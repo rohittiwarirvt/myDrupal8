@@ -1,0 +1,40 @@
+uuid: 1b746774-755e-4b1d-856a-df93803d5205
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.new_announcements.body
+    - field.field.node.new_announcements.feeds_item
+    - field.field.node.new_announcements.field_announcement_link
+    - field.field.node.new_announcements.field_email
+    - field.field.node.new_announcements.field_event_date
+    - field.field.node.new_announcements.field_event_type
+    - node.type.new_announcements
+  module:
+    - text
+    - user
+id: node.new_announcements.teaser
+targetEntityType: node
+bundle: new_announcements
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  feeds_item: true
+  field_announcement_link: true
+  field_email: true
+  field_event_date: true
+  field_event_type: true

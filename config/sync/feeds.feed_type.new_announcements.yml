@@ -1,0 +1,100 @@
+uuid: 6128660f-86a5-49b2-a4b9-b4d7368e3318
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.new_announcements.body
+    - field.field.node.new_announcements.field_announcement_link
+    - field.field.node.new_announcements.field_email
+    - field.field.node.new_announcements.field_event_date
+    - field.field.node.new_announcements.field_event_type
+    - node.type.new_announcements
+  module:
+    - node
+label: 'New Announcements'
+id: new_announcements
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: csv
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  update_existing: 2
+  update_non_existent: _keep
+  expire: -1
+  owner_feed_author: false
+  owner_id: 1
+  authorize: true
+  skip_hash_check: false
+  values:
+    type: new_announcements
+custom_sources:
+  email:
+    label: Email
+    value: Email
+    machine_name: email
+  announcement_link:
+    label: 'Announcement Link'
+    value: 'Announcement Link'
+    machine_name: announcement_link
+  event_date:
+    label: 'Event Date'
+    value: 'Event Date'
+    machine_name: event_date
+  short_information:
+    label: 'Short Information'
+    value: 'Short Information'
+    machine_name: short_information
+  event_type:
+    label: 'Event Type'
+    value: 'Event Type'
+    machine_name: event_type
+  name_of_employee:
+    label: 'Name of Employee'
+    value: 'Name of Employee'
+    machine_name: name_of_employee
+mappings:
+  -
+    target: field_email
+    map:
+      value: email
+    unique:
+      value: '1'
+    settings:
+      defuse: false
+  -
+    target: field_announcement_link
+    map:
+      uri: announcement_link
+      title: ''
+  -
+    target: field_event_date
+    map:
+      value: event_date
+    settings:
+      timezone: UTC
+  -
+    target: body
+    map:
+      value: short_information
+      summary: ''
+    settings:
+      format: plain_text
+  -
+    target: field_event_type
+    map:
+      value: event_type
+    unique: {  }
+  -
+    target: title
+    map:
+      value: name_of_employee
+    unique: {  }
