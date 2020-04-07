@@ -1,0 +1,19 @@
+uuid: f37cc7a3-a3aa-43d9-986d-2f237295b5b6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_job_role
+    - node.type.new_degree
+id: node.new_degree.field_job_role
+field_name: field_job_role
+entity_type: node
+bundle: new_degree
+label: 'Job Role'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

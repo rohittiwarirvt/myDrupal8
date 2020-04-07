@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.new_joiners.body
+    - field.field.node.new_joiners.feeds_item
     - field.field.node.new_joiners.field_email
     - field.field.node.new_joiners.field_joining_date
     - field.field.node.new_joiners.field_name_of_employee
@@ -32,6 +33,7 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  feeds_item: true
   field_email: true
   field_joining_date: true
   field_name_of_employee: true

@@ -1,0 +1,22 @@
+uuid: da3d8959-a542-45c0-a81c-4a66597a4ee4
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.work_anniversary
+id: node.work_anniversary.promote
+field_name: promote
+entity_type: node
+bundle: work_anniversary
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.new_joiners.body
+    - field.field.node.new_joiners.feeds_item
     - field.field.node.new_joiners.field_email
     - field.field.node.new_joiners.field_joining_date
     - field.field.node.new_joiners.field_name_of_employee
@@ -110,4 +111,5 @@ content:
       match_limit: 10
     region: content
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  feeds_item: true

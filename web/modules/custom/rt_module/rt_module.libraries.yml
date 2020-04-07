@@ -35,17 +35,9 @@ innovators:
   dependencies:
     - core/drupal
 2sidedcard:
-  js:
-    timelify/js/jquery.js: {}
-    timelify/js/jquery.timelify.js: {}
-    js/rt-timelify.js: {}
   css:
     theme:
-      timelify/css/font-awesome.min.css: {}
-      timelify/css/timelify.css: {}
-      css/timelify.css: {}
-  dependencies:
-    - core/drupal
+      css/rt-2sidecard.css: {}
 usercards:
   css:
     theme:

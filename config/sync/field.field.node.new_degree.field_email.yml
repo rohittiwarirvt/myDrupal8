@@ -1,0 +1,19 @@
+uuid: 16c816fb-8a3d-4d05-a97d-315f42b8a814
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_email
+    - node.type.new_degree
+id: node.new_degree.field_email
+field_name: field_email
+entity_type: node
+bundle: new_degree
+label: Email
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email
