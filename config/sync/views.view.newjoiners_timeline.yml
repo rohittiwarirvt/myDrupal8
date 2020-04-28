@@ -2492,7 +2492,9 @@ display:
       defaults:
         fields: false
         css_class: false
+        title: false
       css_class: timeline-wrapper-newjoiners
+      title: 'Welcome To EvolentHealth  Guys !'
     cache_metadata:
       max-age: -1
       contexts:
