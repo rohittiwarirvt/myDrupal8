@@ -1,8 +1,30 @@
-body.layout-no-sidebars {
-      background-color: #2f2f2f;
-    color: #eeefef;
-    font-size: 62.5%;
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 0;
+
+
+.path-evh .page-title {
+  font-size: 3.5em;
+  text-align: center;
+  font-weight: bold;
 }
+
+
+.view-new-degree.timeline::before {
+  left: 72%;
+}
+
+
+.view-new-degree.timeline h2 {
+  margin: 0 845px;
+}
+
+.view-new-degree.timeline .timeline-items .timeline-item:nth-of-type(2n+1) {
+  background-image: url(/sites/default/files/backgrounds/header-banner-home.svg);
+  background-size: cover;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+.view-new-degree.timeline .timeline-items .timeline-item {
+  width: 65%;
+}
+

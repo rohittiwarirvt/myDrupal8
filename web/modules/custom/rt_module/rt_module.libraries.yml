@@ -19,7 +19,7 @@ timelifyjs:
     theme:
       timelify/css/font-awesome.min.css: {}
       timelify/css/timelify.css: {}
-      css/timelify.css: {}
+      css/rt-timelify.css: {}
   dependencies:
     - core/drupal
 innovators:

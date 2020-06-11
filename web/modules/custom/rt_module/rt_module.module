@@ -75,7 +75,7 @@ function rt_module_preprocess_views_view(&$variables) {
 
 function rt_module_preprocess_views_view_grid(&$variables) {
   $view = $variables['view'];
-  if (isset($view) && $view->id() == 'work_anniversary') {
+  if (isset($view) && $view->id() == 'work_ansniversary') {
     $anniversary_title_raw = $variables['title']->__toString();
     $anniversary_title = preg_replace("/[^0-9]/", "", $anniversary_title_raw);
     $replace_year = _rt_module_string_to_roman_conversion(trim($anniversary_title));
