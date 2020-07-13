@@ -32,7 +32,7 @@ function rt_module_views_pre_render(ViewExecutable $view) {
         if($view->current_display == 'new_degree_timelify_page') {
           $view->element['#attached']['library'][] = 'rt_module/timelifyjs';
         }
-       break;            
+       break;
       default:
         # code...
         break;
@@ -75,14 +75,14 @@ function rt_module_preprocess_views_view(&$variables) {
 
 function rt_module_preprocess_views_view_grid(&$variables) {
   $view = $variables['view'];
-  if (isset($view) && $view->id() == 'work_ansniversary') {
+  if (isset($view) && $view->id() == 'work_aniversary') {
     $anniversary_title_raw = $variables['title']->__toString();
     $anniversary_title = preg_replace("/[^0-9]/", "", $anniversary_title_raw);
     $replace_year = _rt_module_string_to_roman_conversion(trim($anniversary_title));
     $variables['title'] = Drupal\Core\Render\Markup::create('Happy ' . $replace_year . ' Work Anniversary');
   }
 
-  
+
 }
 
 /**
@@ -106,5 +106,5 @@ function _rt_module_string_to_roman_conversion($string) {
     );
 
     return isset($year_mapping[$year]) ? $year_mapping[$year] : null;
-    
+
 }
