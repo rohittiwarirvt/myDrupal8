@@ -756,9 +756,9 @@ $settings['entity_update_backup'] = TRUE;
 #   include $app_root . '/' . $site_path . '/settings.local.php';
 # }
 $databases['default']['default'] = array (
-  'database' => 'visa_app',
+  'database' => 'd8-passport',
   'username' => 'root',
-  'password' => 'root',
+  'password' => '',
   'prefix' => '',
   'host' => '127.0.0.1',
   'port' => '3306',
