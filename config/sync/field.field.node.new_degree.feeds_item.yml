@@ -1,0 +1,23 @@
+uuid: fb62cff9-3d65-4535-87d3-5047c0776c15
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.feeds_item
+    - node.type.new_degree
+  module:
+    - feeds
+id: node.new_degree.feeds_item
+field_name: feeds_item
+entity_type: node
+bundle: new_degree
+label: 'Feeds item'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:feeds_feed'
+  handler_settings: {  }
+field_type: feeds_item

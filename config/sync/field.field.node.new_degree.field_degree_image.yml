@@ -1,0 +1,23 @@
+uuid: 3f1507b8-49e7-4006-871f-a90442421338
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_degree_image
+    - node.type.new_degree
+  module:
+    - link
+id: node.new_degree.field_degree_image
+field_name: field_degree_image
+entity_type: node
+bundle: new_degree
+label: 'Degree Image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link

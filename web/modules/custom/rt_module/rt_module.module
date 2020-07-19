@@ -1,0 +1,110 @@
+<?php
+
+use Drupal\views\ViewExecutable;
+
+/**
+ * Implements hook_views_pre_render().
+ *
+ * @see \Drupal\views\Tests\Plugin\CacheTest
+ * @see \Drupal\views\Tests\Plugin\RenderTest
+ */
+function rt_module_views_pre_render(ViewExecutable $view) {
+ # dsm($view->id(),"id");
+ # dsm($view->current_display,"cr");
+  if (isset($view)) {
+    switch ($view->id())  {
+      case 'newjoiners_timeline':
+        if($view->current_display == 'newjoiner_timeliners_page') {
+          $view->element['#attached']['library'][] = 'rt_module/timelinerjs';
+        }
+        break;
+      case 'work_anniversary':
+        if($view->current_display == 'work_anniversary_usercards_page') {
+          $view->element['#attached']['library'][] = 'rt_module/usercards';
+        }
+        break;
+      case 'new_announcements':
+        if($view->current_display == 'new_annoucements_cards_page') {
+          $view->element['#attached']['library'][] = 'rt_module/2sidedcard';
+        }
+        break;
+      case 'new_degree':
+        if($view->current_display == 'new_degree_timelify_page') {
+          $view->element['#attached']['library'][] = 'rt_module/timelifyjs';
+        }
+       break;            
+      default:
+        # code...
+        break;
+    }
+  }
+
+}
+
+function rt_module_preprocess_views_view(&$variables) {
+  $view = $variables['view'];
+  #dsm($view->current_display,"cr");
+  // if (isset($view) && ($view->id() == 'newjoiners_timeline' ) ) {
+  //   switch ($view->current_display) {
+  //     case 'newjoiner_timeliners_page':
+  //       $variables['attributes']['class'][] = 'timeline-wrapper-newjoiners';
+  //       break;
+  //     case 'newjoiners_timelify_page':
+  //       $variables['attributes']['class'][] = 'timeline';
+  //       break;
+  //     case 'newjoiner_innovators_page':
+  //       // $view->element['#attached']['library'][] = 'rt_module/innovators';
+  //       break;
+  //     case 'newjoiner_2sidedcard_page':
+  //       // $view->element['#attached']['library'][] = 'rt_module/2sidedcard';
+  //       break;
+  //     case 'newjoiner_usercards_page':
+  //       $variables['attributes']['class'][] = 'timeline';
+  //     break;
+  //     case 'newjoiner_contactme_page':
+  //       // $view->element['#attached']['library'][] = 'rt_module/contactme';
+  //     break;
+  //     default:
+  //       # code...
+  //       break;
+  //   }
+
+  // }
+
+}
+
+function rt_module_preprocess_views_view_grid(&$variables) {
+  $view = $variables['view'];
+  if (isset($view) && $view->id() == 'work_ansniversary') {
+    $anniversary_title_raw = $variables['title']->__toString();
+    $anniversary_title = preg_replace("/[^0-9]/", "", $anniversary_title_raw);
+    $replace_year = _rt_module_string_to_roman_conversion(trim($anniversary_title));
+    $variables['title'] = Drupal\Core\Render\Markup::create('Happy ' . $replace_year . ' Work Anniversary');
+  }
+
+  
+}
+
+/**
+ *  converst 4 years to fourth, 1 year to first
+ */
+
+function _rt_module_string_to_roman_conversion($string) {
+
+    $year = intval($string);
+    $year_mapping = array(
+      1 => "First",
+      2 => "Second",
+      3 => "Third",
+      4 => "Fourth",
+      5 => "Fifth",
+      6 => "Sixth",
+      7 => "Seventh",
+      8 => "Eighth",
+      9 => "Ninth",
+      10 => "Tenth",
+    );
+
+    return isset($year_mapping[$year]) ? $year_mapping[$year] : null;
+    
+}

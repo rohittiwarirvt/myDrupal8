@@ -1,0 +1,19 @@
+uuid: 61bc6fc0-c79f-4fb6-93b8-baf764ecda7d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_name_of_employee
+    - node.type.new_degree
+id: node.new_degree.field_name_of_employee
+field_name: field_name_of_employee
+entity_type: node
+bundle: new_degree
+label: 'Name of Employee'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

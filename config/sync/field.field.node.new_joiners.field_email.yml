@@ -1,0 +1,19 @@
+uuid: eb7eb4b0-f93f-45f7-925a-e48b993f3793
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_email
+    - node.type.new_joiners
+id: node.new_joiners.field_email
+field_name: field_email
+entity_type: node
+bundle: new_joiners
+label: Email
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

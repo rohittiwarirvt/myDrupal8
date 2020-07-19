@@ -1,0 +1,78 @@
+uuid: 38e1dfe4-a560-4fea-b212-6023ce6c7746
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.work_anniversary.field_email
+    - field.field.node.work_anniversary.field_job_role
+    - field.field.node.work_anniversary.field_joining_date
+    - node.type.work_anniversary
+  module:
+    - node
+label: 'Work Anniversary'
+id: work_anniversary
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: csv
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  update_existing: 2
+  update_non_existent: _keep
+  expire: -1
+  owner_feed_author: true
+  owner_id: 0
+  authorize: true
+  skip_hash_check: false
+  values:
+    type: work_anniversary
+custom_sources:
+  join_date:
+    label: 'Join Date'
+    value: 'Join Date'
+    machine_name: join_date
+  email:
+    label: Email
+    value: Email
+    machine_name: email
+  job_role:
+    label: 'Job Role'
+    value: 'Job Role'
+    machine_name: job_role
+  title:
+    label: Title
+    value: Title
+    machine_name: title
+mappings:
+  -
+    target: field_joining_date
+    map:
+      value: join_date
+    settings:
+      timezone: UTC
+  -
+    target: field_email
+    map:
+      value: email
+    unique:
+      value: '1'
+    settings:
+      defuse: false
+  -
+    target: field_job_role
+    map:
+      value: job_role
+    unique: {  }
+  -
+    target: title
+    map:
+      value: title
+    unique: {  }

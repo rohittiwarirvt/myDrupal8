@@ -1,0 +1,23 @@
+uuid: 3071dee5-11af-40e1-8040-f7446fc14aca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.feeds_item
+    - node.type.new_joiners
+  module:
+    - feeds
+id: node.new_joiners.feeds_item
+field_name: feeds_item
+entity_type: node
+bundle: new_joiners
+label: 'Feeds item'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:feeds_feed'
+  handler_settings: {  }
+field_type: feeds_item

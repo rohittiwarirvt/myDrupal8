@@ -1,0 +1,72 @@
+uuid: 97b79207-d28b-4527-a7d5-46e653defedb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.new_joiners.body
+    - field.field.node.new_joiners.feeds_item
+    - field.field.node.new_joiners.field_email
+    - field.field.node.new_joiners.field_joining_date
+    - field.field.node.new_joiners.field_name_of_employee
+    - field.field.node.new_joiners.field_profile_pic_link
+    - node.type.new_joiners
+  module:
+    - datetime
+    - link
+    - text
+    - user
+id: node.new_joiners.default
+targetEntityType: node
+bundle: new_joiners
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_email:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_joining_date:
+    weight: 104
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_name_of_employee:
+    weight: 105
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_profile_pic_link:
+    weight: 103
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  feeds_item: true

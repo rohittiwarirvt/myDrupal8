@@ -1,0 +1,19 @@
+uuid: 5bf3f6e7-e0f5-406b-bcc4-f9e8be36bdb1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_type
+    - node.type.new_announcements
+id: node.new_announcements.field_event_type
+field_name: field_event_type
+entity_type: node
+bundle: new_announcements
+label: 'Event Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

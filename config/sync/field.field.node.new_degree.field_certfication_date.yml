@@ -1,0 +1,21 @@
+uuid: dc9b942c-fe48-4547-8ab3-85fa1fbeae49
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_certfication_date
+    - node.type.new_degree
+  module:
+    - datetime
+id: node.new_degree.field_certfication_date
+field_name: field_certfication_date
+entity_type: node
+bundle: new_degree
+label: 'Certfication Date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

@@ -1,0 +1,37 @@
+uuid: 2ea32e00-cfaf-472e-9022-866771db4007
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:34a7cd5a-fbcd-410b-899f-d2c05bcc899e'
+  module:
+    - block_content
+    - block_visibility_groups
+    - system
+  theme:
+    - rt_bartik
+id: evolenthealthlogo
+theme: rt_bartik
+region: header
+weight: 0
+provider: null
+plugin: 'block_content:34a7cd5a-fbcd-410b-899f-d2c05bcc899e'
+settings:
+  id: 'block_content:34a7cd5a-fbcd-410b-899f-d2c05bcc899e'
+  label: 'Evolent Health Logo'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }
+  request_path:
+    id: request_path
+    pages: '/evh/*'
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,108 @@
+uuid: 2d3a5399-a24e-45e3-8820-a2a3915fc9d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.new_joiners.body
+    - field.field.node.new_joiners.field_email
+    - field.field.node.new_joiners.field_joining_date
+    - field.field.node.new_joiners.field_name_of_employee
+    - field.field.node.new_joiners.field_profile_pic_link
+    - node.type.new_joiners
+  module:
+    - node
+label: 'NewJoiners Update '
+id: new_joiners_feed
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: csv
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  update_existing: 2
+  update_non_existent: _keep
+  expire: -1
+  owner_feed_author: true
+  owner_id: 0
+  authorize: true
+  skip_hash_check: false
+  values:
+    type: new_joiners
+custom_sources:
+  email:
+    label: Email
+    value: Email
+    machine_name: email
+  name:
+    label: Name
+    value: Name
+    machine_name: name
+  joining_date:
+    label: 'Joining Date'
+    value: 'Joining Date'
+    machine_name: joining_date
+  nj_feeds_email:
+    label: Email
+    value: Email
+    machine_name: nj_feeds_email
+  nj_feeds_name:
+    label: Name
+    value: Name
+    machine_name: nj_feeds_name
+  nj_feeds_joining_date:
+    label: 'Joining Date'
+    value: 'Joining Date'
+    machine_name: nj_feeds_joining_date
+  nj_feeds_brief_introduction:
+    label: 'Brief Introduction'
+    value: 'Brief Introduction'
+    machine_name: nj_feeds_brief_introduction
+  nj_feeds_profile_pic:
+    label: 'Profile Pic'
+    value: 'Profile Pic'
+    machine_name: nj_feeds_profile_pic
+mappings:
+  -
+    target: field_email
+    map:
+      value: nj_feeds_email
+    unique:
+      value: '1'
+    settings:
+      defuse: false
+  -
+    target: field_name_of_employee
+    map:
+      value: nj_feeds_name
+    unique: {  }
+  -
+    target: field_joining_date
+    map:
+      value: nj_feeds_joining_date
+    settings:
+      timezone: UTC
+  -
+    target: body
+    map:
+      value: nj_feeds_brief_introduction
+      summary: '----'
+    settings:
+      format: plain_text
+  -
+    target: field_profile_pic_link
+    map:
+      uri: nj_feeds_profile_pic
+      title: '----'
+  -
+    target: title
+    map:
+      value: nj_feeds_name
+    unique: {  }
