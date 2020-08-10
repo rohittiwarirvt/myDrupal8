@@ -2435,7 +2435,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "  <div class=\"timeline-wrapper\">\r\n    <h2 class=\"timeline-time\"><span>{{ field_joining_date }}</span> </h2>\r\n\r\n    <dl class=\"timeline-series\">\r\n\r\n      <dt class=\"timeline-event\" id=\"event{{ counter }}\"><a>{{ field_name_of_employee }}</a></dt>\r\n      <dd class=\"timeline-event-content\" id=\"event{{ counter }}EX\">\r\n        <div>\r\n         \r\n         <div class =\"pic\">        <img src={{ field_profile_pic_link }} ></div>\r\n        <p>{{ body }} </p>\r\n        </div>\r\n\r\n      </dd>\r\n    </dl>\r\n  </div>"
+            text: "  <div class=\"timeline-wrapper\">\r\n    <h2 class=\"timeline-time\"><span>{{ field_joining_date }}</span> </h2>\r\n\r\n    <dl class=\"timeline-series\">\r\n\r\n      <dt class=\"timeline-event\" id=\"event{{ counter }}\"><a>{{ field_name_of_employee }}</a></dt>\r\n      <dd class=\"timeline-event-content\" id=\"event{{ counter }}EX\">\r\n        <div>\r\n         \r\n         <div class =\"pic\">        <img width=\"175px\" src={{ field_profile_pic_link }} ></div>\r\n        <p>{{ body }} </p>\r\n        </div>\r\n\r\n      </dd>\r\n    </dl>\r\n  </div>"
             make_link: false
             path: ''
             absolute: false
@@ -2492,15 +2492,96 @@ display:
       defaults:
         fields: false
         css_class: false
+        filters: false
+        filter_groups: false
+        pager: false
         title: false
       css_class: timeline-wrapper-newjoiners
-      title: 'Welcome To EvolentHealth  Guys !'
+      filters:
+        status:
+          value: '1'
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: node
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+          group: 1
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          value:
+            new_joiners: new_joiners
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+        field_joining_date_value:
+          id: field_joining_date_value
+          table: node__field_joining_date
+          field: field_joining_date_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '>='
+          value:
+            min: ''
+            max: ''
+            value: '2020-04-27'
+            type: date
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: datetime
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      pager:
+        type: none
+        options:
+          offset: 0
+      title: 'Welcome To EvolentHealth Guys !'
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - url.query_args
         - 'user.node_grants:view'
         - user.permissions
       tags:

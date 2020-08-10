@@ -11,7 +11,7 @@ dependencies:
     - node.type.new_joiners
   module:
     - node
-label: 'NewJoiners Update '
+label: 'New Joiners '
 id: new_joiners_feed
 description: ''
 help: ''

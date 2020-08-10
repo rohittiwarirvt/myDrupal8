@@ -1,0 +1,11 @@
+uuid: 6dbe280e-5873-4147-b06a-342bf4efc07e
+langcode: en
+status: true
+dependencies:
+  module:
+    - bulk_update_fields
+id: bulk_update_fields_on_block
+label: 'Bulk Update Block Fields'
+type: block
+plugin: bulk_update_fields_action_base
+configuration: {  }
