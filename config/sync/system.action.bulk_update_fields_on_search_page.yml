@@ -1,0 +1,11 @@
+uuid: f8220731-2e7e-4c32-9e46-a9df695d284e
+langcode: en
+status: true
+dependencies:
+  module:
+    - bulk_update_fields
+id: bulk_update_fields_on_search_page
+label: 'Bulk Update Search page Fields'
+type: search_page
+plugin: bulk_update_fields_action_base
+configuration: {  }

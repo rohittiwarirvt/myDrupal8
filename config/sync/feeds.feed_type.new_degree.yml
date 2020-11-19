@@ -1,0 +1,94 @@
+uuid: 2b5db686-975f-4bb4-b4c9-52ce2c595b8f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.new_degree.field_certfication_date
+    - field.field.node.new_degree.field_degree_image
+    - field.field.node.new_degree.field_email
+    - field.field.node.new_degree.field_job_role
+    - field.field.node.new_degree.field_name_of_employee
+    - node.type.new_degree
+  module:
+    - node
+label: 'New Degree'
+id: new_degree
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: csv
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  update_existing: 2
+  update_non_existent: _keep
+  expire: -1
+  owner_feed_author: true
+  owner_id: 1
+  authorize: true
+  skip_hash_check: false
+  values:
+    type: new_degree
+custom_sources:
+  email:
+    label: Email
+    value: Email
+    machine_name: email
+  certification_date:
+    label: 'Certification Date'
+    value: 'Certification Date'
+    machine_name: certification_date
+  degree_image:
+    label: 'Degree Image'
+    value: 'Degree Image'
+    machine_name: degree_image
+  job_role:
+    label: 'Job Role'
+    value: 'Job Role'
+    machine_name: job_role
+  name_of_employee:
+    label: 'Name of Employee'
+    value: 'Name of Employee'
+    machine_name: name_of_employee
+mappings:
+  -
+    target: field_email
+    map:
+      value: email
+    unique:
+      value: '1'
+    settings:
+      defuse: false
+  -
+    target: field_certfication_date
+    map:
+      value: certification_date
+    settings:
+      timezone: UTC
+  -
+    target: field_degree_image
+    map:
+      uri: degree_image
+      title: ''
+  -
+    target: field_job_role
+    map:
+      value: job_role
+    unique: {  }
+  -
+    target: field_name_of_employee
+    map:
+      value: name_of_employee
+    unique: {  }
+  -
+    target: title
+    map:
+      value: name_of_employee
+    unique: {  }

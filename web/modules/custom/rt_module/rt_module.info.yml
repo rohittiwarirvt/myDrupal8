@@ -1,0 +1,7 @@
+name: Rohit Development
+type: module
+description: 'Perform custom contrib'
+package: NL
+version: 1.x
+core: 8.x
+

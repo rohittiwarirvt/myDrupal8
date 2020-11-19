@@ -1,0 +1,19 @@
+uuid: 0e173dba-4ca8-4dd3-af38-662bd9f7c841
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_email
+    - node.type.new_announcements
+id: node.new_announcements.field_email
+field_name: field_email
+entity_type: node
+bundle: new_announcements
+label: Email
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

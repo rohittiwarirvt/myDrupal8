@@ -1,0 +1,11 @@
+uuid: 4ab7e194-7b71-49bf-bfee-1d0f97177c47
+langcode: en
+status: true
+dependencies:
+  module:
+    - bulk_update_fields
+id: bulk_update_fields_on_contact_form
+label: 'Bulk Update Contact form Fields'
+type: contact_form
+plugin: bulk_update_fields_action_base
+configuration: {  }

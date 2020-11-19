@@ -1,0 +1,66 @@
+timelinerjs:
+  js:
+    timeliner/js/timeliner.js: {}
+    js/rt-timeliner.js: {}
+  css:
+    theme:
+      timeliner/css/timeliner.css: {}
+      timeliner/css/responsive.css: {}
+      css/rt-timeliner.css: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+timelifyjs:
+  js:
+    timelify/js/jquery.js: {}
+    timelify/js/jquery.timelify.js: {}
+    js/rt-timelify.js: {}
+  css:
+    theme:
+      timelify/css/font-awesome.min.css: {}
+      timelify/css/timelify.css: {}
+      css/rt-timelify.css: {}
+  dependencies:
+    - core/drupal
+innovators:
+  js:
+    timelify/js/jquery.js: {}
+    timelify/js/jquery.timelify.js: {}
+    js/rt-timelify.js: {}
+  css:
+    theme:
+      timelify/css/font-awesome.min.css: {}
+      timelify/css/timelify.css: {}
+      css/timelify.css: {}
+  dependencies:
+    - core/drupal
+2sidedcard:
+  css:
+    theme:
+      css/rt-2sidecard.css: {}
+usercards:
+  css:
+    theme:
+      css/rt-usercards.css: {}
+contactme:
+  js:
+    timelify/js/jquery.js: {}
+    timelify/js/jquery.timelify.js: {}
+    js/rt-timelify.js: {}
+  css:
+    theme:
+      timelify/css/font-awesome.min.css: {}
+      timelify/css/timelify.css: {}
+      css/timelify.css: {}
+  dependencies:
+    - core/drupal
+new_joiners_masonry:
+  js:
+    https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js: { type: external, minified: true}
+    js/rt-new-joiners-masonry.js: {}
+  css:
+    theme:
+      css/rt-new-joiners-masonry.css: {}
+  dependencies:
+    - core/drupal
+    - core/jquery

@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+.masonry-wrapper-newjoiners {
+  font-family: 'PT Sans', sans-serif;
+  text-align: center;
+}
+
+.masonry-joiner-wrapper {
+    border-radius: 11px;
+    color: #1a1c21;
+    font-family: "PT Sans";
+    margin: 0 30px 30px 0;
+    padding-bottom: 7px;
+    background-color: #fff;
+
+}
+
+.masonry-wrapper-newjoiners {
+    margin-top: 3rem;
+}
+.masonry-joiner-wrapper{
+    width: 390px;
+    float: left;
+}
+
+.view-content {
+    overflow: hidden;
+}
+
+.joiner-name {
+    margin-top: 22px;
+    padding: 0 20px;
+    font-size: 16px;
+    font-weight: 700;
+}
+.joiner-intro {
+  font-size: 1.1em;
+  padding: 0 25px;
+}
+
+html .page-title {
+    font-size: 3rem;
+    color: #fff;
+    font-family: 'PT Sans', sans-serif;
+    text-align: center;
+}
+
+.joiner-pic {
+  background-color: #242d69;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 150px;
+}
+.joiner-pic img {
+    min-width: 250px;
+}
+
+
+html #page {
+  background-image: url(https://static.tumblr.com/3nghtcy/cRImezufo/low_contrast_linen.png);
+  background-color: #343640;
+  background-size: auto !important;
+  background-attachment: scroll !important;
+}
+
+html #main-wrapper {
+  background-image: inherit;
+}
+html #header {
+  background-color: #fff;
+  background-image: none;
+}

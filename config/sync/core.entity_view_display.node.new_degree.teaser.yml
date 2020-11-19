@@ -1,0 +1,32 @@
+uuid: 3d3ba85a-4aec-4736-825a-9bc5a544c885
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.new_degree.feeds_item
+    - field.field.node.new_degree.field_certfication_date
+    - field.field.node.new_degree.field_degree_image
+    - field.field.node.new_degree.field_email
+    - field.field.node.new_degree.field_job_role
+    - field.field.node.new_degree.field_name_of_employee
+    - node.type.new_degree
+  module:
+    - user
+id: node.new_degree.teaser
+targetEntityType: node
+bundle: new_degree
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  feeds_item: true
+  field_certfication_date: true
+  field_degree_image: true
+  field_email: true
+  field_job_role: true
+  field_name_of_employee: true

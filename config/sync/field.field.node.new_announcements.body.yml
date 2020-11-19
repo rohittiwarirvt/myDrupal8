@@ -1,0 +1,23 @@
+uuid: 96fcf390-6e3f-4256-a03a-1b3cacc5e704
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.new_announcements
+  module:
+    - text
+id: node.new_announcements.body
+field_name: body
+entity_type: node
+bundle: new_announcements
+label: 'Short Information'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

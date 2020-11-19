@@ -1,0 +1,40 @@
+uuid: c6deb353-0581-4d32-8364-d0d8d127b2cf
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.new_joiners.body
+    - field.field.node.new_joiners.feeds_item
+    - field.field.node.new_joiners.field_email
+    - field.field.node.new_joiners.field_joining_date
+    - field.field.node.new_joiners.field_name_of_employee
+    - field.field.node.new_joiners.field_profile_pic_link
+    - node.type.new_joiners
+  module:
+    - text
+    - user
+id: node.new_joiners.teaser
+targetEntityType: node
+bundle: new_joiners
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  feeds_item: true
+  field_email: true
+  field_joining_date: true
+  field_name_of_employee: true
+  field_profile_pic_link: true

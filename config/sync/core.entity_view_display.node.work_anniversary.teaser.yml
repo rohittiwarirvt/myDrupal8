@@ -1,0 +1,28 @@
+uuid: 2af45cea-50f3-451a-afbc-645411609b8c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.work_anniversary.feeds_item
+    - field.field.node.work_anniversary.field_email
+    - field.field.node.work_anniversary.field_job_role
+    - field.field.node.work_anniversary.field_joining_date
+    - node.type.work_anniversary
+  module:
+    - user
+id: node.work_anniversary.teaser
+targetEntityType: node
+bundle: work_anniversary
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  feeds_item: true
+  field_email: true
+  field_job_role: true
+  field_joining_date: true

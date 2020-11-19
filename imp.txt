@@ -1,0 +1,3 @@
+'system.site:uuid': 97aa2542-d8d6-40f9-952e-0bebe279af7a
+
+drush config-set "system.site" uuid "97aa2542-d8d6-40f9-952e-0bebe279af7a"

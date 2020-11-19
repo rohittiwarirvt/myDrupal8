@@ -1,0 +1,18 @@
+uuid: 22944e87-2139-4de2-bd77-472e53a8fb15
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'New Announcements'
+type: new_announcements
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

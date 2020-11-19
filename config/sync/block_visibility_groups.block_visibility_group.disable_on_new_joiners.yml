@@ -1,0 +1,17 @@
+uuid: d34dd395-df90-44ea-b28a-5ffbfd727817
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: disable_on_new_joiners
+label: 'Disable on New Joiners'
+logic: and
+conditions:
+  41963fcf-8a13-47db-9d8f-87aae695b32a:
+    id: request_path
+    pages: '/evh/*'
+    negate: true
+    context_mapping: {  }
+    uuid: 41963fcf-8a13-47db-9d8f-87aae695b32a
+allow_other_conditions: true
